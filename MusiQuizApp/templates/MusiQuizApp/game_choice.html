@@ -1,0 +1,8 @@
+{% extends "MusiQuizApp/layout.html" %}
+
+{% block body %}
+<div id="button-container">
+    <a class="btn btn-primary" href="{% url 'teams' %}" role="button" style="margin-right: 200px;">Jeu en équipe</a>
+    <a class="btn btn-primary" href="{% url 'classic' %}" role="button">Jeu collectif</a>
+</div>
+{% endblock %}

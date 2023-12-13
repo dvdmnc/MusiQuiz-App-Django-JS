@@ -1,0 +1,110 @@
+{% extends "MusiQuizApp/layout.html" %}
+
+{% block body %}
+<div style="display:flex;" >
+    <div id="left_display">
+        <div id="buttons">
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="next" syle="display: none">Suivant</button>
+        </div>
+        <div id="timeteams">
+            {{number_teams|json_script:"turn"}}
+            <h5 id="teamturn"></h5>
+            {{time|json_script:"time"}}
+            <h5 id="timer"></h5>
+        </div>
+        {{songs_samples|json_script:"songs_samples"}}
+        <div id="listen">
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+            <div class="listendisplay">
+                <a href="#" class="samplelink">Choisir</a>
+                <audio src="" controls>
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+        </div>
+        {{songs_singers|json_script:"songs_singers"}}
+        {{songs|json_script:"songs"}}
+        <div id="songs">
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+            <a href="#" class="songlink"></a>
+        </div>
+    </div>
+    {{singers_names_faces|json_script:"singers_names_faces"}}
+    <div id="right_display" >
+        <div id="faces" >
+        </div>
+        <br>
+        <div id="names">
+        </div>
+    </div>
+    <table id ="scoretable">
+        <tr>
+            <th>Equipe</th>
+            <th>Score</th>
+        </tr>
+    </table>
+</div>
+{% endblock %}

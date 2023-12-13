@@ -1,0 +1,16 @@
+{% extends "MusiQuizApp/layout.html" %}
+
+{% block body %}
+<div style="display: flex; justify-content: center; margin-top: 40vh;">
+    <form method="post" action="{% url 'classic_game' %}">
+        {% csrf_token %}
+        <b><label for="time">Durée des tours (en minutes) :</label></b>
+        <input type="number" id="time" name="time">
+        <br><br>
+        <b><label for="numberturns">Nombre de tours :</label></b>
+        <input type="number" id="numberturns" name="numberturns">
+        <br><br>
+        <input type="submit" value="Valider" style="margin-left: 50%;">
+    </form>
+</div>
+{% endblock %}
